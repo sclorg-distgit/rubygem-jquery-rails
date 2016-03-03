@@ -6,7 +6,7 @@
 
 Name: %{?scl_prefix}rubygem-%{gem_name}
 Version: 4.0.4
-Release: 3%{?dist}
+Release: 4%{?dist}
 Summary: Use jQuery with Rails 4+
 Group: Development/Languages
 License: MIT
@@ -15,7 +15,7 @@ Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
 Requires:      %{?scl_prefix_ruby}ruby(release)
 Requires:      %{?scl_prefix_ruby}ruby(rubygems) >= 1.3.6
-Requires:      %{?scl_prefix_ruby}rubygem(railties) >= 4.2.0
+Requires:      %{?scl_prefix}rubygem(railties) >= 4.2.0
 Requires:      %{?scl_prefix}rubygem(thor) >= 0.14
 Requires:      %{?scl_prefix}rubygem(thor) < 2.0
 Requires:      %{?scl_prefix}rubygem(rails-dom-testing) => 1.0
@@ -83,6 +83,9 @@ popd
 %{gem_instdir}/jquery-rails.gemspec
 
 %changelog
+* Wed Mar 02 2016 Pavel Valena <pvalena@redhat.com> - 4.0.4-4
+- Fix Require of rubygem-railties
+
 * Wed Mar 02 2016 Pavel Valena <pvalena@redhat.com> - 4.0.4-3
 - Update to 4.0.4
 
